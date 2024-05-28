@@ -1,4 +1,3 @@
-
 # Network Config Converter
 
 ## Overview
@@ -15,7 +14,7 @@ Network Config Converter is a Node.js module that allows you to convert Debian n
 To install the module, use npm:
 
 ```bash
-npm install network-config-converter
+npm install network-conf-debian
 ```
 
 ## Usage
@@ -27,10 +26,10 @@ To convert a Debian network configuration file to JSON, use the `convertNetworkF
 #### Example
 
 ```javascript
-const { convertNetworkFileToJSON } = require('network-config-converter');
+const { convertNetworkFileToJSON } = require("network-conf-debian");
 
-const networkConfigPath = 'path/to/network-config';
-const outputJSONPath = 'path/to/network-config.json';
+const networkConfigPath = "path/to/network-config";
+const outputJSONPath = "path/to/network-config.json";
 
 convertNetworkFileToJSON(networkConfigPath, outputJSONPath);
 ```
@@ -42,10 +41,10 @@ To convert a JSON formatted network configuration to a Debian network configurat
 #### Example
 
 ```javascript
-const { convertJSONFileToNetworkConfig } = require('network-config-converter');
+const { convertJSONFileToNetworkConfig } = require("network-conf-debian");
 
-const jsonFilePath = 'path/to/network-config.json';
-const outputNetworkConfigPath = 'path/to/network-config';
+const jsonFilePath = "path/to/network-config.json";
+const outputNetworkConfigPath = "path/to/network-config";
 
 convertJSONFileToNetworkConfig(jsonFilePath, outputNetworkConfigPath);
 ```
@@ -99,16 +98,19 @@ Converts a JSON object representing a network configuration to a Debian network 
 Here’s an example of how to use both functions in a single script:
 
 ```javascript
-const { convertNetworkFileToJSON, convertJSONFileToNetworkConfig } = require('network-config-converter');
+const {
+  convertNetworkFileToJSON,
+  convertJSONFileToNetworkConfig,
+} = require("network-conf-debian");
 
 // Convert Network Configuration File to JSON
-const networkConfigPath = 'path/to/network-config';
-const outputJSONPath = 'path/to/network-config.json';
+const networkConfigPath = "path/to/network-config";
+const outputJSONPath = "path/to/network-config.json";
 convertNetworkFileToJSON(networkConfigPath, outputJSONPath);
 
 // Convert JSON to Network Configuration File
-const jsonFilePath = 'path/to/network-config.json';
-const outputNetworkConfigPath = 'path/to/network-config';
+const jsonFilePath = "path/to/network-config.json";
+const outputNetworkConfigPath = "path/to/network-config";
 convertJSONFileToNetworkConfig(jsonFilePath, outputNetworkConfigPath);
 ```
 
