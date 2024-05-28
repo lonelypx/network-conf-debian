@@ -4,6 +4,7 @@
   "description": "A module to convert Debian network configuration files to JSON and vice versa.",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
