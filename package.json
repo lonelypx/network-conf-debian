@@ -1,0 +1,17 @@
+{
+  "name": "network-conf-debian",
+  "version": "1.0.0",
+  "description": "A module to convert Debian network configuration files to JSON and vice versa.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "network",
+    "config",
+    "json",
+    "debian"
+  ],
+  "author": "Anil Mathew",
+  "license": "ISC"
+}
