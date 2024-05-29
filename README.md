@@ -34,6 +34,21 @@ const outputJSONPath = "path/to/network-config.json";
 convertNetworkFileToJSON(networkConfigPath, outputJSONPath);
 ```
 
+#### Callback Example
+
+You can also use a callback function to handle the converted configuration:
+
+```javascript
+const {
+  convertNetworkFileToJSON,
+  convertJSONFileToNetworkConfig,
+} = require("network-conf-debian");
+
+convertNetworkFileToJSON("/etc/network/interfaces", null, (jsonConfig) => {
+  console.log(jsonConfig);
+});
+```
+
 ### Converting JSON to Network Configuration File
 
 To convert a JSON formatted network configuration to a Debian network configuration file, use the `convertJSONFileToNetworkConfig` function.
@@ -58,7 +73,8 @@ Converts a Debian network configuration file to a JSON file.
 #### Parameters
 
 - `filePath` (string): Path to the input network configuration file.
-- `outputFilePath` (string): Path to the output JSON file.
+- `outputFilePath` (string): Path to the output JSON file. If not provided, the JSON string will be returned.
+- `callback` (function): Callback function to handle the converted JSON configuration.
 
 ### convertJSONFileToNetworkConfig(jsonFilePath, outputFilePath)
 
@@ -67,7 +83,8 @@ Converts a JSON formatted network configuration file to a Debian network configu
 #### Parameters
 
 - `jsonFilePath` (string): Path to the input JSON file.
-- `outputFilePath` (string): Path to the output network configuration file.
+- `outputFilePath` (string): Path to the output network configuration file. If not provided, the converted network configuration will be returned.
+- `callback` (function): Callback function to handle the converted network configuration.
 
 ### parseNetworkConfig(fileContent)
 
@@ -141,3 +158,4 @@ Anil Mathew
 ## Version History
 
 - **1.0.0**: Initial release
+- **1.0.1**: Updated version
